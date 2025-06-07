@@ -5,7 +5,6 @@ const LastUpdated = ({ t, lastUpdate }) => {
             <h2 className='text-2xl mb-2 leading-6'>{t('Sidebar.welcome')}</h2>
             <time className="text-[.8rem] text-subtext flex items-center gap-1">
                 {t("Sidebar.lastupdate")} : {lastUpdate}
-                <PiArrowsClockwise  className="text-primary"/> 
             </time>
         </div>
     )
