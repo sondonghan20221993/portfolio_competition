@@ -64,6 +64,6 @@ export const getStaticProps = async () => {
                 '/api/guestbook': messages,
             },
         },
-        revalidate: 3600, // ISR: regenerate every 1 hour
+        revalidate: 1, // ISR: regenerate every 1 hour
     };
 };
