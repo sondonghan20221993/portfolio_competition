@@ -8,6 +8,7 @@ import { supabase } from '@/lib/supabase';
 import { GuestbookMessages } from './GuestbookMessages';
 import ChatInput from './ChatInput';
 import ChatAuth from './ChatAuth';
+import { ReplyProvider } from '@/context/ReplyContext';
 
 export default function Guestbook({ locale }) {
     const { data: messages } = useSWR('/api/guestbook', fetcher);
@@ -73,9 +74,9 @@ export default function Guestbook({ locale }) {
             // console.log("Message deleted:", data);
         }
     };
-console.log(session)
+
     return (
-        <>
+        <ReplyProvider>
             <div className="flex flex-col flex-1">
             <GuestbookMessages
                 initialMessages={messages}
@@ -89,6 +90,6 @@ console.log(session)
                 <ChatAuth />
             )}
             </div>
-        </>
+        </ReplyProvider>
     );
 }

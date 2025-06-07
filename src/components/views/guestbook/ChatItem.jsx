@@ -2,9 +2,11 @@ import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiTrash2 as DeleteIcon } from 'react-icons/fi';
+import { HiReply } from 'react-icons/hi';
 import { MdAdminPanelSettings } from 'react-icons/md';
 import { supabase } from '@/lib/supabase';
 import ChatTime from './ChatTime';
+import { RiReplyFill } from 'react-icons/ri';
 
 const ChatItem = ({
   locale,
@@ -16,6 +18,7 @@ const ChatItem = ({
   created_at,
   reactions,
   onDelete,
+  onReply,
   session,
   onPopupToggle,
   isActivePopup,
@@ -158,14 +161,17 @@ const ChatItem = ({
                 <span className=' text-[10px]'>Author</span>
               </div>
             )}
-            <div className='flex items-center gap-3'>
+            <div className='flex items-center gap-1'>
               {(session?.email === email || session?.email === authorEmail) && (
                 <DeleteIcon
-                  size={17}
-                  className='hidden cursor-pointer text-red-500 group-hover:flex mr-3'
-                  onClick={() => onDelete(id)}
-                />
-              )}
+                size={17}
+                    className='hidden cursor-pointer text-red-500 group-hover:flex'
+                    onClick={() => onDelete(id)}
+                    />
+                  )}
+                  {(session?.email !== email) && (
+                      <HiReply className='hidden cursor-pointer group-hover:flex text-text' title='Reply' onClick={() => onReply(name)} />
+                  )}
             </div>
           </div>
         </div>
@@ -176,7 +182,7 @@ const ChatItem = ({
             {/* Reactions Section */}
             <div className={`${session && 'mt-2'} ${showEmojiPopup && '!flex'} ${Object.keys(currentReactions).length !== 0 && '!flex mt-2'} items-center gap-2`}>
               {session && (
-                <div className='relative'>
+                <div className='relative flex gap-2 items-center'>
                   <motion.button whileTap={{ scale: 1.05 }} className="text-sm text-subtext h-[24px] flex item-center justify-center items-center" onClick={toggleEmojiPopup}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

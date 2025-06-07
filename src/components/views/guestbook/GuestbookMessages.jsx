@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef, useLayoutEffect } from "react";
 import { supabase } from "@/lib/supabase";
 import ChatItem from "./ChatItem";
+import { useReply } from "@/context/ReplyContext";
 
 export const GuestbookMessages = ({ initialMessages, onDeleteMessage, session, locale }) => {
     const [messages, setMessages] = useState(initialMessages || []);
@@ -15,6 +16,8 @@ export const GuestbookMessages = ({ initialMessages, onDeleteMessage, session, l
             scrollableContainerRef.current.scrollTop = scrollableContainerRef.current.scrollHeight;
         }
     };
+
+    const { handleReply } = useReply();
 
     useLayoutEffect(() => {
         scrollToBottom();
@@ -66,6 +69,7 @@ export const GuestbookMessages = ({ initialMessages, onDeleteMessage, session, l
                         key={index}
                         locale={locale}
                         onDelete={onDeleteMessage}
+                        onReply={handleReply}
                         {...msg}
                         session={session}
                         onPopupToggle={handlePopupToggle}

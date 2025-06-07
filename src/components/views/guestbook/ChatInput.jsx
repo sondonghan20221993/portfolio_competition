@@ -1,11 +1,21 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiSend as SendIcon } from "react-icons/fi";
 
 import ChatUserInfo from "./ChatUserInfo";
+import { useReply } from "@/context/ReplyContext";
 
 const ChatInput = ({ onSendMessage, session, locale }) => {
     const [message, setMessage] = useState("");
     const [isSending, setIsSending] = useState(false);
+    const { replyTo, setReplyTo } = useReply();
+    const inputRef = useRef();
+
+    useEffect(() => {
+        if (replyTo && inputRef.current) {
+            inputRef.current.value = replyTo;
+            inputRef.current.focus();
+        }
+    }, [replyTo]);
 
     const handleSendMessage = async (e) => {
         e.preventDefault();
@@ -33,6 +43,7 @@ const ChatInput = ({ onSendMessage, session, locale }) => {
             <form className="flex items-center gap-x-1 border-t border-stroke pb-3 pt-4">
                 <input
                     type="text"
+                    ref={inputRef}
                     value={message}
                     onChange={handleChange}
                     placeholder={locale == "en" ? "Drop your thoughts here..." : "Tulis kesanmu di sini..."}
