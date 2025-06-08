@@ -43,6 +43,7 @@ const Contact = () => {
                     <form
                         ref={formRef}
                         onSubmit={handleSubmit}
+                        autoComplete='off'
                         className="contact__form">
                         <div className="flex-col flex md:flex-row md:gap-4 justify-evenly"
                         >
@@ -50,6 +51,7 @@ const Contact = () => {
                                 <div className="form-label">{t('Contact.name')}</div>
                                 <input
                                     type="text"
+                                    autoComplete={"off"}
                                     className="form-input"
                                     placeholder={t('Contact.namePlaceholder')}
                                     name="name"
@@ -60,6 +62,7 @@ const Contact = () => {
                                 <div className="form-label">{t('Contact.mail')}</div>
                                 <input
                                     type="email"
+                                    autoComplete={"off"}
                                     className="form-input"
                                     placeholder={t('Contact.mailPlaceholder')}
                                     name="email"
@@ -71,7 +74,7 @@ const Contact = () => {
                             <div className="form-label">{t('Contact.projectDesc')}</div>
                             <textarea
                                 name="project"
-                                id=""
+                                autoComplete={"off"}
                                 cols="30"
                                 rows="10"
                                 required={true}
