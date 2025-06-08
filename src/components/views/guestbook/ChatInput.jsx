@@ -3,6 +3,7 @@ import { FiSend as SendIcon } from "react-icons/fi";
 
 import ChatUserInfo from "./ChatUserInfo";
 import { useReply } from "@/context/ReplyContext";
+import Image from "next/image";
 
 const ChatInput = ({ onSendMessage, session, locale }) => {
     const [message, setMessage] = useState("");
@@ -40,8 +41,10 @@ const ChatInput = ({ onSendMessage, session, locale }) => {
 
     return (
         <>
-            <form className="flex items-center gap-x-1 border-t border-stroke pb-3 pt-4">
-                <input
+            <form className="flex items-center gap-x-3 border-t border-stroke pb-3 pt-4">
+                <Image src={session.user_metadata.avatar_url} alt={session.user_metadata.name} width={40} height={40} className="rounded-full" />
+                <textarea
+                    rows={1}
                     type="text"
                     ref={inputRef}
                     value={message}
@@ -55,7 +58,7 @@ const ChatInput = ({ onSendMessage, session, locale }) => {
                     type="submit"
                     onClick={handleSendMessage}
                     className={
-                        `ml-2 rounded-md btn !p-[.65rem] ${!message.trim() && "!bg-container !border-stroke !text-subtext cursor-not-allowed "}`
+                        `rounded-md btn !p-[.65rem] ${!message.trim() && "!bg-container !border-stroke !text-subtext cursor-not-allowed "}`
                     }
                     disabled={isSending || !message.trim()}
                     data-umami-event="Chat Widget: Send Chat"
