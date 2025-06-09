@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { PiCopyright } from "react-icons/pi"
 
 const Footer = () => {
@@ -7,9 +8,9 @@ const Footer = () => {
                 <PiCopyright size={15} className="text-primary" />
                 {new Date().getFullYear()} Dwi wijaya
             </span>
-            <span className="text-subtext text-xs flex items-center gap-1">
+            <Link href="https://github.com/dwiwijaya/dwiwijaya.com" className="text-subtext hover:text-primary text-xs flex items-center gap-1">
                 Open Source under GPL License
-            </span>
+            </Link>
         </footer>
     )
 }
