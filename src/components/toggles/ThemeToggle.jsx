@@ -42,14 +42,14 @@ const ThemeToggle = ({t}) => {
                             currentTheme === "light" ? "!text-slate-800" : ""
                         } ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"}`}
                     >
-                        <i className="fad fa-sun-bright"></i>{t("Sidebar.light")}
+                        <i className="fad fa-sun-bright"></i>{t("light")}
                     </p>
                     <p
                         className={`z-10 p-3 justify-center leading-4 flex items-center gap-2 text-slate-500 transition-all duration-300 ${
                             currentTheme === "dark" ? "!text-slate-300" : ""
                         } ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"}`}
                     >
-                        <i className="fad fa-moon"></i>{t("Sidebar.dark")}
+                        <i className="fad fa-moon"></i>{t("dark")}
                     </p>
                 </div>
             </label>
