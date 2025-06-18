@@ -3,7 +3,8 @@
         "welcome": "Welcome !",
         "lastupdate": "Updated on",
         "dark": "Dark",
-        "light": "Light"
+        "light": "Light",
+        "openSource": "Open Source under GPL License"
     },
     "Home": {
         "greeting": "Hello everyone",

@@ -19,7 +19,7 @@ const Sidebar = ({ className, lastUpdate }) => {
     const { locale } = useRouter();
     const { theme } = useTheme();
     const pathname = usePathname()
-    const t = useTranslations();
+    const t = useTranslations("Sidebar");
 
     const formatDate = (date) => {
         return new Date(date).toLocaleDateString(locale, {
@@ -109,7 +109,7 @@ const Sidebar = ({ className, lastUpdate }) => {
                         </div>
                     </nav>
                 </div>
-                <Footer />
+                <Footer t={t} />
                 <div onClick={() => setToggle(!toggle)} className={`toggle lg:-left-64 left-5 sidebar__toggle ${toggle ? '!left-[17rem]' : ''}`}>
                     <i className="fa-duotone fa-bars text-primary"></i>
                 </div>
