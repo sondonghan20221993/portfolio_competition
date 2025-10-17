@@ -1,6 +1,6 @@
 <div align="center">
-  <h1>dwiwijaya.com</h1>
-  <p>🔥 A personal website thoughtfully crafted using Next.js, Tailwind CSS, SWR, and Supabase</p>
+  <h1>이미지변형과 모델의 정확도</h1>
+  <p>이미지 변형에 대한 모델의 내성을 높이기 위해 학습 이미지에 변형을 적용하는 것이 목표이다. </p>
 </div>
 <br />
 
@@ -19,109 +19,44 @@ If you find this repository useful, show your support with a ⭐. Got suggestion
 
 This project leverages the following technologies and tools:  
 
-- ◼️ Next.js 13.5.6
-- ⚛️ React 18
-- 💠 Tailwind CSS 3
-- 🅰️ Font Awesome Pro
-- 💢 React Icons
-- ➰ Framer Motion
-- 〰️ SWR
-- 🔥 Supabase
-- 📧 EmailJS
-- 📱 PWA
-- 🧿 Absolute Import and Path Alias
-- 📏 ESLint
-- ✨ Prettier
-- 📌 Conventional Commit Lint
+- 🧠 PyTorch - 딥러닝 학습을 위한 프레임워크
+- 🧮 NumPy — 행렬, 수치(숫자, 벡터등)연산
+- 📸 OpenCV - 이미지 변형, 전처리
+- 📊 Grad-CAM - 모델의 이미지 예측 시각화
+- 📊 Matplotlib - 결과, 데이터 시각화
+- 🚀 CUDA - 학습을 위한 GPU가속
+
 <br />
 
 ## Features
 
-Here are the key features that make this website unique:
+프로젝트의 핵심 기능
 
-- ### 💬 Realtime Guestbook  
-  A dynamic chat-powered guestbook built with Firebase. Visitors can leave messages that appear instantly on the website.
-- ### 🌐 Multilingual Support  
-  Providing content in both Indonesian and English to cater to a diverse audience.
-- ### 🗳 Projects  
-  This section showcases projects fetched from a Supabase PostgreSQL database using Prisma. Data is retrieved with ISR (Incremental Static Regeneration) and SSR (Server-Side Rendering) for project details.
+- ### 이미지 변형을 활용한 모델 학습
+  다양한 노이즈(salt-paper, 다른이미지 합성 등)를 적용시켜 딥러닝 모델을 학습해
+  모델의 강인성과 일반화 성능을 향상시킵니다.
+- ### 정확도 분석 + Grad-CAM 시각화
+  이미지 변형 유형별로 모델 성능을 평가하고, 정확도 변화를 시각화하여 강점과 약점 파악 및
+  입력 이미지의 어떤 영역을 기준으로 판단했는지 시각화하여, 모델의 판단 근거를 해석한다.
+- ### GPU 가속 학습
+  CUDA를 지원하는 GPU를 활용하여 대규모 데이터셋 학습 속도를 크게 향상시킵니다.
+- ### 데이터 전처리 및 처리
+  OpenCV, NumPy, Pandas 등을 사용하여 이미지를 효율적으로 전처리하고, 데이터셋을 관리하여 모델 학습에 최적화합니다.
 <br /><br />
 
 ## Performance
 
-- **PageSpeed Insights**  
-  [Performance report](https://pagespeed.web.dev/analysis/https-dwiwijaya-com/spw0h9zc7j?form_factor=desktop)  
-
+- **이미지 변형별**  
   ![PageSpeed Insights](/assets/pagespeed.png)
 
-- **GTmetrix**  
-  [Performance report](https://gtmetrix.com/reports/dwiwijaya.com/K78O0zLh/)  
-
+- **Grad-CAM 시각화**  
   ![GTmetrix](/assets/gtmetrix.png)
 <br /><br />
 
-## Future Development Plans
+## Future Development Plans  
 
-Here’s what’s on the horizon for this project:  
 
-1. **Migration to Supabase**  
-   Complete migration of backend functionalities to Supabase for improved scalability and performance.  
-   *Status: Not started yet.*  
-
-2. **Feature Blog**  
-   The blog feature is in maintenance and temporarily accessible at [https://dev.dwiwijaya.com](https://dev.dwiwijaya.com).  
-   *Status: On hold due to other priorities.*  
-
-3. **Redesign Homepage Layout**  
-   Revamp the homepage for a cleaner and more modern look, optimizing user experience while keeping it visually appealing.  
-   *Status: Planned.*  
 <br /><br />
-
-## Getting Started
-
-Follow these simple steps to get the project running locally:
-
-### 1. Clone the Repository  
-
-You can clone this repository in three different ways:  
-
-- **Using Git**  
-  ```bash
-  git clone https://github.com/dwiwijaya/dwiwijaya.com
-  ```
-
-- **Using `create-next-app`**  
-  ```bash
-  npx create-next-app -e https://github.com/dwiwijaya/dwiwijaya.com project-name
-  ```
-
-- **Using `degit`**  
-  ```bash
-  npx degit dwiwijaya/dwiwijaya.com YOUR_APP_NAME
-  ```
-
-### 2. Install Dependencies  
-
-To ensure proper setup, it's recommended to use **yarn** for installing dependencies:  
-```bash
-yarn install
-```  
-
-### 3. Configure `.env`  
-
-Copy the `.env.example` file to `.env` and replace placeholders with your credentials. For third-party integrations like Spotify, Firebase, and Supabase, refer to their respective documentation.  
-
-### 4. Start Development Server  
-
-Launch the server locally using this command:  
-```bash
-yarn dev
-```  
-
-Then, open [http://localhost:3000](http://localhost:3000) to view the website. You can start customizing it by modifying files in the `src` directory.
-<br /><br />
-
-## License  
 
 This project is licensed under the [GPL-3.0 license](https://github.com/dwiwijaya/dwiwijaya.com/blob/master/LICENSE).  
 Feel free to use, modify, and share it while adhering to the terms.
