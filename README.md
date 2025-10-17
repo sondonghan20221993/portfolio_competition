@@ -4,7 +4,7 @@
 </div>
 <br />
 
-![Preview](/assets/preview-light.png)
+![Preview](design_folder/assets/preview-light.png)
 
 ## Introduction
 
