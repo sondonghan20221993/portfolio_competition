@@ -4,15 +4,10 @@
 </div>
 <br />
 
-![Preview](design_folder/assets/preview-light.png)
-
 ## Introduction
 
-Welcome to my personal website repository! This platform is more than just a website—it's a space to share knowledge, insights, and tools. Built from scratch starting in June 2024, it incorporates cutting-edge technologies and draws inspiration from <a href="https://aulianza.id/" target="_blank" rel="noopener noreferrer">Aulianza's website</a>.  
+모델 학습 시 이미지에 다양한 변형을 적용하여, 실제 환경에서 목표 물체가 손상되거나 외관이 달라졌을 때에도 대응할 수 있는 강인한 모델을 제작하는 것을 목표로 프로젝트를 진행합니다.
 
-This is an evolving project where I constantly strive to enhance features and deliver better functionality. Feel free to explore, use, or modify it as a reference for your own projects.  
-
-If you find this repository useful, show your support with a ⭐. Got suggestions or questions? I'd love to hear from you! 🧑‍💻  
 <br /><br />
 
 ## Tech Stack
@@ -46,11 +41,11 @@ This project leverages the following technologies and tools:
 
 ## Performance
 
-- **이미지 변형별**  
-  ![PageSpeed Insights](/assets/pagespeed.png)
+- **이미지 변형**  
+  ![Noising IMG](/design_folder/assets/Noising Data.png)
 
 - **Grad-CAM 시각화**  
-  ![GTmetrix](/assets/gtmetrix.png)
+  ![Gradcam_img](/design_folder/assets/gradcam.png)
 <br /><br />
 
 ## Future Development Plans  
