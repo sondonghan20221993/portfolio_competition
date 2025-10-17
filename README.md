@@ -42,7 +42,7 @@ This project leverages the following technologies and tools:
 ## Performance
 
 - **이미지 변형**  
-  ![Noising IMG](/design_folder/assets/Noising Data.png)
+  ![noising img](/design_folder/assets/Noising Data.png)
 
 - **Grad-CAM 시각화**  
   ![Gradcam_img](/design_folder/assets/gradcam.png)
