@@ -49,21 +49,21 @@ This project leverages the following technologies and tools:
   ### bfs_noise(픽셀단위 변화량 큰 곳의 픽셀값 변형)
   ![bfs_img](/design_folder/assets/bfs_img.jpg)
 - **Grad-CAM 시각화**  
-    ### 원본이미지
+    원본이미지
       #### 정답
       ![origin_correct_img](/design_folder/assets/origin_correct.png)
       #### 오답
       ![origin_incorrect_img](/design_folder/assets//origin_incorrect.png)
       #### 평가
       ![origin_eval](/design_folder/assets//origin_eval.png)
-    ### 소금 후추 노이즈(salt_pepper_nosise)
+    소금 후추 노이즈(salt_pepper_nosise)
       #### 정답
       ![salt_correct_img](/design_folder/assets//salt_correct.png)
       #### 오답
       ![salt_incorrect_img](/design_folder/assets//salt_incorrect.png)
       #### 평가
       ![salt_eval](/design_folder/assets//salt_eval.png)
-    ### bfs_noise(픽셀단위 변화량 큰 곳의 픽셀값 변형)
+    bfs_noise(픽셀단위 변화량 큰 곳의 픽셀값 변형)
       #### 정답
       ![origin_correct_img](/design_folder/assets//bfs_correct.png)
       #### 오답
