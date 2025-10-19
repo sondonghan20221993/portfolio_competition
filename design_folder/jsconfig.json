@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["design_folder/src/*"]
+      "@/*": ["design_floder/src/*"]
     }
   }
 }

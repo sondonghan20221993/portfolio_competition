@@ -42,14 +42,44 @@ This project leverages the following technologies and tools:
 ## Performance
 
 - **이미지 변형**  
-  ![noising img](/design_folder/assets/Noising_Data.png)
-
+  ### 원본이미지
+  ![origin_img](/design_folder/assets/origin_img.jpg)
+  ### 소금 후추 노이즈(salt_pepper_nosise)
+  ![salt_pepper_img](/design_folder/assets/salt_pepper_img.jpg)
+  ### bfs_noise(픽셀단위 변화량 큰 곳의 픽셀값 변형)
+  ![bfs_img](/design_folder/assets/bfs_img.jpg)
 - **Grad-CAM 시각화**  
-  ![Gradcam_img](/design_folder/assets/gradcam.png)
+    ### 원본이미지
+      #### 정답
+      ![origin_correct_img](/design_folder/assets/origin_correct.png)
+      #### 오답
+      ![origin_incorrect_img](/design_folder/assets//origin_incorrect.png)
+      #### 평가
+      ![origin_eval](/design_folder/assets//origin_eval.png)
+    ### 소금 후추 노이즈(salt_pepper_nosise)
+      #### 정답
+      ![salt_correct_img](/design_folder/assets//salt_correct.png)
+      #### 오답
+      ![salt_incorrect_img](/design_folder/assets//salt_incorrect.png)
+      #### 평가
+      ![salt_eval](/design_folder/assets//salt_eval.png)
+    ### bfs_noise(픽셀단위 변화량 큰 곳의 픽셀값 변형)
+      #### 정답
+      ![origin_correct_img](/design_folder/assets//bfs_correct.png)
+      #### 오답
+      ![bfs_incorrect_img](/design_folder/assets//bfs_incorrect.png)
+      #### 평가
+      ![salt_eval](/design_folder/assets//bfs_eval.png)
 <br /><br />
 
 ## Future Development Plans  
-
+- ### 이미지 분석 및 개선 방안 탐색
+  각각 노이즈 방식에 따라 떨어지는 정확도를 올리기 위한 방안
+  grad-cam참고시 얼굴 그중 일부분만 보고 판별한다. -> 좀더 많은 부분으로 학습 가능하게 만들기
+- ### 추가적인 다양한 노이즈방식
+  다른이미지 섞기, 주성분 분석으로 이미지 차원축소등 다양한 이미지 변형 시도
+- ### 다양한 데이터 셋에 적용
+  해당 deepfake이미지 판별 문제만이 아닌 다양한 데이터셋에 적용시켜 좀더 다양한 환경에서 시도해보기
 
 <br /><br />
 
